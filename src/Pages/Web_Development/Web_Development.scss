@@ -1,0 +1,79 @@
+.breadcrumb {
+    display: inline-block;
+    padding: 0 30px 0 0;
+    margin: 0;
+    background: transparent;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.breadcrumb li {
+    float: left;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.breadcrumb li:nth-child(even) {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.breadcrumb li:last-child {
+    padding: 10px 25px;
+    color: #046e6c;
+    z-index: 1;
+    position: relative;
+}
+
+.breadcrumb li:last-child:before {
+    content: "";
+    display: block;
+    width: 117%;
+    height: 101%;
+    background: #2c2c2e;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%) skew(-20deg);
+}
+
+.breadcrumb li:before {
+    display: none;
+}
+
+.breadcrumb li a {
+    display: block;
+    padding: 10px 25px;
+    font-size: 14px;
+    color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .breadcrumb li a,
+    .breadcrumb li:last-child {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .breadcrumb li a,
+    .breadcrumb li:last-child {
+        padding: 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    .breadcrumb li a,
+    .breadcrumb li:last-child {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
